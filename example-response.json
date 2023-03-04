@@ -1,0 +1,548 @@
+{
+  "validationErrors": [],
+  "confirmationMessages": [],
+  "printDocuments": [],
+  "exportDocument": null,
+  "success": true,
+  "itemId": [],
+  "itemDeleteId": [],
+  "data": {
+    "debutPeriode": "2023-02-27T00:00:00",
+    "finPeriode": "2023-04-16T00:00:00",
+    "nbJoursRecherche": 49,
+    "messageEmptyResult": null,
+    "creneaux": [
+      {
+        "codeSite": "CIP",
+        "libelleSite": "CIPAG - Imagerie du Mail, GRENOBLE",
+        "dates": [
+          {
+            "date": "2023-04-08T00:00:00",
+            "jour": "Samedi",
+            "heures": [
+              {
+                "code": "08:30",
+                "libelle": "08:00*",
+                "codeCreneau": "A10357553312",
+                "codePoste": "IRMA22",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              }
+            ]
+          },
+          {
+            "date": "2023-04-13T00:00:00",
+            "jour": "Jeudi",
+            "heures": [
+              {
+                "code": "08:00",
+                "libelle": "07:30",
+                "codeCreneau": "A10358599542",
+                "codePoste": "IRMA22",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "",
+                "isFavorite": false,
+                "listePostesPhases": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "codeSite": "CED",
+        "libelleSite": "Imagerie des Cèdres, ECHIROLLES",
+        "dates": [
+          {
+            "date": "2023-04-06T00:00:00",
+            "jour": "Jeudi",
+            "heures": [
+              {
+                "code": "07:00",
+                "libelle": "06:30",
+                "codeCreneau": "A10357541246",
+                "codePoste": "IRCED3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "",
+                "isFavorite": false,
+                "listePostesPhases": null
+              },
+              {
+                "code": "07:15",
+                "libelle": "06:45",
+                "codeCreneau": "A10357541246",
+                "codePoste": "IRCED3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "",
+                "isFavorite": false,
+                "listePostesPhases": null
+              }
+            ]
+          },
+          {
+            "date": "2023-04-08T00:00:00",
+            "jour": "Samedi",
+            "heures": [
+              {
+                "code": "08:00",
+                "libelle": "07:30*",
+                "codeCreneau": "A10357540555",
+                "codePoste": "IRCED3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              },
+              {
+                "code": "08:15",
+                "libelle": "07:45*",
+                "codeCreneau": "A10357540555",
+                "codePoste": "IRCED3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              },
+              {
+                "code": "08:30",
+                "libelle": "08:00*",
+                "codeCreneau": "A10357540555",
+                "codePoste": "IRCED3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              },
+              {
+                "code": "09:00",
+                "libelle": "08:30*",
+                "codeCreneau": "A10357540511",
+                "codePoste": "IRCED3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              },
+              {
+                "code": "09:15",
+                "libelle": "08:45*",
+                "codeCreneau": "A10357540511",
+                "codePoste": "IRCED3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              },
+              {
+                "code": "09:30",
+                "libelle": "09:00*",
+                "codeCreneau": "A10357540511",
+                "codePoste": "IRCED3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              },
+              {
+                "code": "10:15",
+                "libelle": "09:45*",
+                "codeCreneau": "A10357540356",
+                "codePoste": "IRCED3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              }
+            ]
+          },
+          {
+            "date": "2023-04-11T00:00:00",
+            "jour": "Mardi",
+            "heures": [
+              {
+                "code": "07:00",
+                "libelle": "06:30*",
+                "codeCreneau": "A10358594299",
+                "codePoste": "IRCED3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              },
+              {
+                "code": "07:15",
+                "libelle": "06:45*",
+                "codeCreneau": "A10358594299",
+                "codePoste": "IRCED3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              },
+              {
+                "code": "07:30",
+                "libelle": "07:00*",
+                "codeCreneau": "A10358594299",
+                "codePoste": "IRCED3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              }
+            ]
+          },
+          {
+            "date": "2023-04-13T00:00:00",
+            "jour": "Jeudi",
+            "heures": [
+              {
+                "code": "07:00",
+                "libelle": "06:30*",
+                "codeCreneau": "A10358594299",
+                "codePoste": "IRCED3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              },
+              {
+                "code": "07:15",
+                "libelle": "06:45*",
+                "codeCreneau": "A10358594299",
+                "codePoste": "IRCED3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              },
+              {
+                "code": "07:30",
+                "libelle": "07:00*",
+                "codeCreneau": "A10358594299",
+                "codePoste": "IRCED3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              }
+            ]
+          },
+          {
+            "date": "2023-04-15T00:00:00",
+            "jour": "Samedi",
+            "heures": [
+              {
+                "code": "08:15",
+                "libelle": "07:45*",
+                "codeCreneau": "A10358593749",
+                "codePoste": "IRCED3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              },
+              {
+                "code": "08:30",
+                "libelle": "08:00*",
+                "codeCreneau": "A10358593749",
+                "codePoste": "IRCED3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              },
+              {
+                "code": "09:15",
+                "libelle": "08:45*",
+                "codeCreneau": "A10358593823",
+                "codePoste": "IRCED3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              },
+              {
+                "code": "09:30",
+                "libelle": "09:00*",
+                "codeCreneau": "A10358593823",
+                "codePoste": "IRCED3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              },
+              {
+                "code": "10:00",
+                "libelle": "09:30*",
+                "codeCreneau": "A10358593926",
+                "codePoste": "IRCED3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              },
+              {
+                "code": "10:15",
+                "libelle": "09:45*",
+                "codeCreneau": "A10358593926",
+                "codePoste": "IRCED3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "codeSite": "DRA",
+        "libelleSite": "Imagerie du DRAC - Mutualiste, GRENOBLE",
+        "dates": [
+          {
+            "date": "2023-04-12T00:00:00",
+            "jour": "Mercredi",
+            "heures": [
+              {
+                "code": "12:15",
+                "libelle": "11:45*",
+                "codeCreneau": "A10358528547",
+                "codePoste": "IRDRA3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              },
+              {
+                "code": "13:15",
+                "libelle": "12:45*",
+                "codeCreneau": "A10358528711",
+                "codePoste": "IRDRA3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              },
+              {
+                "code": "19:00",
+                "libelle": "18:30*",
+                "codeCreneau": "A10358530967",
+                "codePoste": "IRDRA3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              },
+              {
+                "code": "19:15",
+                "libelle": "18:45*",
+                "codeCreneau": "A10358530967",
+                "codePoste": "IRDRA3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              }
+            ]
+          },
+          {
+            "date": "2023-04-13T00:00:00",
+            "jour": "Jeudi",
+            "heures": [
+              {
+                "code": "07:00",
+                "libelle": "06:30*",
+                "codeCreneau": "A10358528959",
+                "codePoste": "IRDRA3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              },
+              {
+                "code": "07:15",
+                "libelle": "06:45*",
+                "codeCreneau": "A10358528959",
+                "codePoste": "IRDRA3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              },
+              {
+                "code": "07:30",
+                "libelle": "07:00*",
+                "codeCreneau": "A10358528959",
+                "codePoste": "IRDRA3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              },
+              {
+                "code": "12:00",
+                "libelle": "11:30*",
+                "codeCreneau": "A10358528547",
+                "codePoste": "IRDRA3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              },
+              {
+                "code": "12:15",
+                "libelle": "11:45*",
+                "codeCreneau": "A10358528547",
+                "codePoste": "IRDRA3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              },
+              {
+                "code": "13:00",
+                "libelle": "12:30*",
+                "codeCreneau": "A10358528711",
+                "codePoste": "IRDRA3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              },
+              {
+                "code": "13:15",
+                "libelle": "12:45*",
+                "codeCreneau": "A10358528711",
+                "codePoste": "IRDRA3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              },
+              {
+                "code": "19:00",
+                "libelle": "18:30*",
+                "codeCreneau": "A10358530967",
+                "codePoste": "IRDRA3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              },
+              {
+                "code": "19:15",
+                "libelle": "18:45*",
+                "codeCreneau": "A10358530967",
+                "codePoste": "IRDRA3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              },
+              {
+                "code": "19:30",
+                "libelle": "19:00*",
+                "codeCreneau": "A10358530967",
+                "codePoste": "IRDRA3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              }
+            ]
+          },
+          {
+            "date": "2023-04-14T00:00:00",
+            "jour": "Vendredi",
+            "heures": [
+              {
+                "code": "12:00",
+                "libelle": "11:30*",
+                "codeCreneau": "A10358528547",
+                "codePoste": "IRDRA3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              },
+              {
+                "code": "12:15",
+                "libelle": "11:45*",
+                "codeCreneau": "A10358528547",
+                "codePoste": "IRDRA3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              },
+              {
+                "code": "13:00",
+                "libelle": "12:30*",
+                "codeCreneau": "A10358528711",
+                "codePoste": "IRDRA3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              },
+              {
+                "code": "13:15",
+                "libelle": "12:45*",
+                "codeCreneau": "A10358528711",
+                "codePoste": "IRDRA3",
+                "codeVacation": "",
+                "idProgrammation": "",
+                "depassementHonoraires": "D",
+                "isFavorite": false,
+                "listePostesPhases": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "dataDashboard": null,
+  "storageServerId": "a1b2f546-a633-48a8-99f2-a3b602bbd60d"
+}

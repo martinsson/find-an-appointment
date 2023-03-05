@@ -19,7 +19,7 @@ async function runIt() {
     let {examenCode, beforeDate} = validateArgs();
     const creds = JSON.parse(fs.readFileSync(__dirname + "/../.env.json").toString('utf-8'))
     const slack = new Slack(creds.slackSortirDette);
-    const notifier = new Fastmail("jm1974@hotmail.com", creds.password)
+    const notifier = new Fastmail("aurelia.schatz@hotmail.fr", creds.password)
     return checkSlotsUseCase(examenCode, beforeDate, notifier)
 };
 

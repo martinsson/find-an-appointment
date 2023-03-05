@@ -11,7 +11,7 @@ export class RdvDate {
     static fromFrenchDate(dateString: string): RdvDate {
         let milliseconds = Date.parse(dateString);
         let timezoneOffset = -new Date(dateString).getTimezoneOffset();
-        let milliSecondsOffset = 1000 * 60 * timezoneOffset;
+        let milliSecondsOffset = 1000 * (60*2) * timezoneOffset; // winter time
         return new RdvDate(new Date(milliseconds + milliSecondsOffset))
     }
 

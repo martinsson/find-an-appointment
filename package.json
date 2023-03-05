@@ -4,7 +4,9 @@
   "description": "tool to watch for earlier appointments ",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "rm -rf build && tsc --outdir build",
+    "start": "npm run build && node build/index.js"
   },
   "author": "",
   "license": "ISC",

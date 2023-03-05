@@ -13,6 +13,13 @@ export async function checkSlotsUseCase(examenCode: string, beforeDate: RdvDate)
         console.log("found dates before : \n", datesString)
         let text = `dates disponibles: \n${datesString}`;
         await axios.post("https://hooks.slack.com/services/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", {text});
+    } else {
+        if (availableDates.length === 0) {
+            console.log("no dates available ");
+
+        } else {
+            console.log("no dates available, first date is " + availableDates[0])
+        }
     }
 
 }

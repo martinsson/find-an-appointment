@@ -1,5 +1,5 @@
 import axios from "axios";
-import {SearchResponse} from "../response-types";
+import {SearchResponse} from "./response-types";
 import {RdvDate} from "../rdv.date";
 
 export function extractAvailableDates(searchResponse: SearchResponse): RdvDate[] {

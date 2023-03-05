@@ -51,3 +51,8 @@ export class RdvDate {
 export function findDatesBefore(date: RdvDate, dates: RdvDate[]): RdvDate[] {
     return dates.filter(d => d < date)
 }
+
+export function printDates(dates: RdvDate[]): string {
+    return dates.map(RdvDate.printDate).join("\n");
+
+}

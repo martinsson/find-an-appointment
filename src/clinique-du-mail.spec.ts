@@ -1,8 +1,7 @@
-import {SearchResponse} from "./response-types";
+import {SearchResponse} from "./clinique-du-mail/response-types";
 import * as fs from "fs";
 import {checkSlotsUseCase} from "./check-slots-usecase";
-import {printDates} from "./logic";
-import {findDatesBefore, RdvDate} from "./rdv.date";
+import {findDatesBefore, printDates, RdvDate} from "./rdv.date";
 import {extractAvailableDates, nextDay} from "./clinique-du-mail/adapter";
 
 

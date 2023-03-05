@@ -1,7 +1,6 @@
 import axios from "axios";
 import {extractAvailableDates, invokeCliniqueMailSearch} from "./clinique-du-mail/adapter";
-import {printDates} from "./logic";
-import {findDatesBefore, RdvDate} from "./rdv.date";
+import {findDatesBefore, printDates, RdvDate} from "./rdv.date";
 
 
 export async function checkSlotsUseCase(examenCode: string, beforeDate: RdvDate) {

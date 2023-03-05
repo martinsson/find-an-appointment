@@ -11,17 +11,6 @@ export class RdvDate {
         return d1.date < d2.date ? -1 : 1;
     }
 
-    constructor(private date: Date) {
-        if (!date) {
-            throw new Error("date cannot be undefined, was " + date)
-        }
-        this.date = date;
-    }
-
-    public toString() {
-        return RdvDate.printDate(this)
-    }
-
     static fromFrenchDate(dateString: string): RdvDate {
         let milliseconds = Date.parse(dateString);
         let timezoneOffset = - new Date(dateString).getTimezoneOffset();
@@ -34,6 +23,31 @@ export class RdvDate {
         let milliSecondsOffset = 1000*60 * timezoneOffset;
         return new RdvDate(new Date(milliseconds + milliSecondsOffset))
     }
+
+    static uniqueDates(dates: RdvDate[]) {
+        const uniqueDates = new Map(dates.map(d => [d.toString(), d])).values()
+        return [...uniqueDates];
+    }
+
+    static sortedAndUniqueDates(dateStrings: string[]) {
+        let dates = dateStrings.map(RdvDate.fromFrenchDate);
+        let rdvDates = RdvDate.uniqueDates(dates);
+
+        return rdvDates.sort(RdvDate.compare)
+    }
+
+    constructor(private date: Date) {
+        if (!date) {
+            throw new Error("date cannot be undefined, was " + date)
+        }
+        this.date = date;
+    }
+
+    public toString() {
+        return RdvDate.printDate(this)
+    }
+
+
 }
 
 export function findDatesBefore(date: RdvDate, dates: RdvDate[]): RdvDate[] {
@@ -41,13 +55,11 @@ export function findDatesBefore(date: RdvDate, dates: RdvDate[]): RdvDate[] {
 }
 
 
+
+
 export function extractAvailableDates(searchResponse: SearchResponse): RdvDate[] {
     let dateStrings: string[]= searchResponse.data.creneaux.flatMap(c => c.dates).map(dateElement => dateElement.date) as any as string[];
-    console.log(dateStrings)
-    console.log(typeof dateStrings[0])
-    let dates = dateStrings.map(RdvDate.fromFrenchDate);
-    let sort = dates.sort(RdvDate.compare); //?
-    return [...new Set(sort)]
+    return RdvDate.sortedAndUniqueDates(dateStrings);
 }
 
 export async function getAvailableDates(codeExamen: string) {

@@ -18,7 +18,7 @@ describe('', function () {
         expect(sortedDates[0]).toEqual(RdvDate.fromFrenchDate("2023-04-05T22:00:00.000Z"))
     });
 
-    it.skip('should deduplicate dates ', async() => {
+    it('should deduplicate dates ', async() => {
         const searchResponse: SearchResponse = JSON.parse(fs.readFileSync("./example-response.json").toString())
         const sortedDates = extractAvailableDates(searchResponse);
         expect(sortedDates.length).toBeLessThan(10)
@@ -58,7 +58,7 @@ function send(email: EmailMessage) {
 }
 
 describe('Send notification', function () {
-    it('should send an email', () => {
+    it.skip('should send an email', () => {
         const email = buildEmail("jm1974@hotmail.com", "slots are available starting on the 2023-03-04")
         expect(() => send(email)).not.toThrow()
     });
@@ -74,7 +74,7 @@ describe('use case notify when slots are available', function () {
 });
 
 describe('usecase', function () {
-    it.skip('should ', async () => {
-        expect(async () => await checkSlotsUseCase("ILOMB", RdvDate.fromFrenchDate("2023-05-10T00:00:00Z"))).not.toThrow()
+    it.skip('shou ld ', async () => {
+        expect(async () => await checkSlotsUseCase("ILOMB", RdvDate.fromFrenchDate("2023-04-10T00:00:00Z"))).not.toThrow()
     });
 });

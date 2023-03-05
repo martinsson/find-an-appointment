@@ -1,18 +1,12 @@
 import {SearchResponse} from "./response-types";
 import * as fs from "fs";
-import {extractAvailableDates, findDatesBefore, getAvailableDates, nextDay} from "./find-dates.before";
 import {checkSlotsUseCase} from "./check-slots-usecase";
 import {printDates} from "./logic";
-import {RdvDate} from "./rdv.date";
+import {findDatesBefore, RdvDate} from "./rdv.date";
+import {extractAvailableDates, nextDay} from "./clinique-du-mail/adapter";
 
 
 describe('', function () {
-    it.skip('should ', async() => {
-        let codeExamen = "ILOMB";
-        let datesWithAvailabilities = await getAvailableDates(codeExamen);
-        expect(datesWithAvailabilities).toHaveLength(10)
-        // expect(dateStrings).toHaveLength(10)
-    })
     it('should order dates ', async() => {
         const searchResponse: SearchResponse = JSON.parse(fs.readFileSync("./example-response.json").toString())
         const sortedDates = extractAvailableDates(searchResponse);

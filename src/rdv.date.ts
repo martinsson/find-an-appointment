@@ -47,3 +47,7 @@ export class RdvDate {
 
 
 }
+
+export function findDatesBefore(date: RdvDate, dates: RdvDate[]): RdvDate[] {
+    return dates.filter(d => d < date)
+}

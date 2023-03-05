@@ -1,8 +1,6 @@
 import {KO, Message, NotificationResult, Notifier} from "./notifier";
 import {google} from "googleapis";
-import {authenticate} from "@google-cloud/local-auth";
 import * as path from "path";
-import fs from "fs";
 
 export class Gmail implements Notifier {
     constructor(private toEmail: string) {

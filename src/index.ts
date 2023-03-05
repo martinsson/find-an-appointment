@@ -1,5 +1,5 @@
 import {checkSlotsUseCase} from "./check-slots-usecase";
-import {RdvDate} from "./find-dates.before";
+import {RdvDate} from "./rdv.date";
 
 
 function validateArgs() {

@@ -1,8 +1,9 @@
 import {SearchResponse} from "./response-types";
 import * as fs from "fs";
-import {extractAvailableDates, findDatesBefore, getAvailableDates, nextDay, RdvDate} from "./find-dates.before";
+import {extractAvailableDates, findDatesBefore, getAvailableDates, nextDay} from "./find-dates.before";
 import {checkSlotsUseCase} from "./check-slots-usecase";
 import {printDates} from "./logic";
+import {RdvDate} from "./rdv.date";
 
 
 describe('', function () {
@@ -29,6 +30,12 @@ describe('', function () {
         let dates = ["2023-04-04", "2023-04-06", "2023-02-21"].map(RdvDate.fromFrenchDate);
         const result = findDatesBefore(RdvDate.fromFrenchDate("2023-04-05"), dates)
         expect(result).toEqual(["2023-04-04", "2023-02-21"].map(RdvDate.fromFrenchDate))
+    });
+
+    it("should provide the dates that are before a given date", () => {
+        let dates = ["2023-04-04", "2023-04-06", "2023-02-21"].map(RdvDate.fromFrenchDate);
+        const result = findDatesBefore(RdvDate.fromFrenchDate("2023-04-01"), dates)
+        expect(result).toEqual(["2023-02-21"].map(RdvDate.fromFrenchDate))
     });
 
     it('should ', () => {

@@ -2,6 +2,7 @@ import {extractAvailableDates, invokeCliniqueMailSearch} from "./clinique-du-mai
 import {findDatesBefore, printDates, RdvDate} from "./dates/rdv.date";
 import {Logger} from "./logger";
 import {Notifier} from "./notification/notifier";
+import fs from "fs";
 
 
 class DatesAvailable {
@@ -44,4 +45,8 @@ export async function checkSlotsUseCase(examenCode: string, beforeDate: RdvDate,
     } else {
         logger.log(result.message)
     }
+}
+
+export function loadCreds() {
+    return JSON.parse(fs.readFileSync(__dirname + "/../.env.json").toString('utf-8'));
 }

@@ -1,6 +1,6 @@
 import axios from "axios";
 import {SearchResponse} from "./response-types";
-import {RdvDate} from "../rdv.date";
+import {RdvDate} from "../dates/rdv.date";
 
 export function extractAvailableDates(searchResponse: SearchResponse): RdvDate[] {
     let dateStrings: string[] = searchResponse.data.creneaux.flatMap(c => c.dates).map(dateElement => dateElement.date) as any as string[];

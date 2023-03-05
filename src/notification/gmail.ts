@@ -5,7 +5,7 @@ export class Gmail implements Notifier {
 
     }
 
-    notify(message: Message): NotificationResult {
+    async notify(message: Message): Promise<NotificationResult> {
         return new KO("ot implmentned");
     }
 

@@ -2,7 +2,7 @@ export interface Message {
     body: string
 }
 
-class OK {
+export class OK {
 }
 
 export class KO {
@@ -13,5 +13,5 @@ export class KO {
 export type NotificationResult = OK | KO
 
 export interface Notifier {
-    notify(message: Message): NotificationResult;
+    notify(message: Message): Promise<NotificationResult>;
 }

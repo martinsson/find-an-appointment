@@ -2,6 +2,7 @@ import axios from "axios";
 import {extractAvailableDates, invokeCliniqueMailSearch} from "./clinique-du-mail/adapter";
 import {findDatesBefore, printDates, RdvDate} from "./dates/rdv.date";
 import {Logger} from "./logger";
+import {Slack} from "./notification/slack";
 
 
 class DatesAvailable {
@@ -35,12 +36,13 @@ function checkSlotsUseCaseLogic(beforeDate: RdvDate, availableDates: RdvDate[]) 
 
 export async function checkSlotsUseCase(examenCode: string, beforeDate: RdvDate) {
     const logger = new Logger()
+    const slackNotifier = new Slack("https://hooks.slack.com/services/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")
     const searchResponse = await invokeCliniqueMailSearch(examenCode)
     const availableDates = extractAvailableDates(searchResponse.data)
     let result = checkSlotsUseCaseLogic(beforeDate, availableDates);
     if (result instanceof DatesAvailable) {
         logger.log(result.text, "notifying...")
-        await axios.post("https://hooks.slack.com/services/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", {text: result.text});
+        await slackNotifier.notify({body: result.text})
     } else {
         logger.log(result.message)
     }

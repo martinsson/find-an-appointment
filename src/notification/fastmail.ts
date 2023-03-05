@@ -16,15 +16,14 @@ export class Fastmail implements Notifier {
             },
         });
 
+        let htmlContent = message.body.replaceAll("\n", "<br>");
         let info = await transporter.sendMail({
             from: '"Rdv médicaux par Johan 👻" <rdv.medicaux@hackyourjob.com>', // sender address
             to: this.toEmail,
             subject: "Nouveau rdv trouvé",
             text: message.body,
-            html: `<p>${message.body}</p>`,
+            html: `<p>${htmlContent}</p>`,
         });
-
-        console.log("result of send", info)
 
         return new OK()
     }

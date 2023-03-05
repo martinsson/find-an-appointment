@@ -1,6 +1,9 @@
 import {checkSlotsUseCase} from "./check-slots-usecase";
 import {RdvDate} from "./dates/rdv.date";
 import {Logger} from "./logger";
+import {Slack} from "./notification/slack";
+import {Fastmail} from "./notification/fastmail";
+import fs from "fs";
 
 
 function validateArgs() {
@@ -14,7 +17,10 @@ function validateArgs() {
 
 async function runIt() {
     let {examenCode, beforeDate} = validateArgs();
-    return checkSlotsUseCase(examenCode, beforeDate)
+    const creds = JSON.parse(fs.readFileSync(__dirname + "/../.env.json").toString('utf-8'))
+    const slack = new Slack(creds.slackSortirDette);
+    const notifier = new Fastmail("jm1974@hotmail.com", creds.password)
+    return checkSlotsUseCase(examenCode, beforeDate, notifier)
 };
 
 runIt().catch(e => {

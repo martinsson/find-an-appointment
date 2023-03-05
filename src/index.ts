@@ -1,5 +1,6 @@
 import {checkSlotsUseCase} from "./check-slots-usecase";
 import {RdvDate} from "./dates/rdv.date";
+import {Logger} from "./logger";
 
 
 function validateArgs() {
@@ -17,6 +18,7 @@ async function runIt() {
 };
 
 runIt().catch(e => {
-    console.error(e.message)
+    const logger = new Logger()
+    logger.error(e.message)
     process.exit(1)
 } );

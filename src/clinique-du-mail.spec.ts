@@ -15,29 +15,44 @@ function extractAvailableDates(searchResponse: SearchResponse) {
     return dates.sort(compare);
 }
 
+function nextDay(now: Date) {
+    return new Date(now.getTime() + (1000 * 3600 * 24));
+}
+
+async function invokeCliniqueMailSearch(codeExamen: string) {
+    const result = await axios.post<SearchResponse>("https://risweb.groupe-du-mail.com/XaPortaildiffusionmobile/Application/api/PriseRvExternal/SearchCreneauxReservation",
+        {
+            "codeSite": "",
+            "typeExamen": "IR",
+            "periode": "00",
+            "date": nextDay(new Date()),
+            "codeRadiologue": "",
+            "typeAssurance": "",
+            "isAffichageAllemagne": false,
+            "examen": {
+                "isProtocole": false,
+                "code": codeExamen,
+                "libelle": "IRM LOMBAIRE",
+                "isProtocoleMutliSite": false
+            }
+        }
+    );
+    return result;
+}
+
+async function getAvailableDates(codeExamen: string) {
+    const result = await invokeCliniqueMailSearch(codeExamen);
+    let dateStrings = result.data.data.creneaux.flatMap(c => c.dates).map(dateElement => dateElement.date);
+    let datesWithAvailabilities = dateStrings.map(ds => new Date(ds));
+    return datesWithAvailabilities;
+}
+
 describe('', function () {
     it.skip('should ', async() => {
-        const result = await axios.post<SearchResponse>("https://risweb.groupe-du-mail.com/XaPortaildiffusionmobile/Application/api/PriseRvExternal/SearchCreneauxReservation",
-            {
-                "codeSite": "",
-                "typeExamen": "IR",
-                "periode": "00",
-                "date": "2023-03-04T00:00:00",
-                "codeRadiologue": "",
-                "typeAssurance": "",
-                "isAffichageAllemagne": false,
-                "examen": {
-                    "isProtocole": false,
-                    "code": "ILOMB",
-                    "libelle": "IRM LOMBAIRE",
-                    "isProtocoleMutliSite": false
-                }
-            }
-        );
-        // fs.writeFileSync("./response.json", JSON.stringify(result.data), 'utf-8')
-        let dateStrings = result.data.data.creneaux.flatMap(c =>c.dates).map(dateElement => dateElement.date);
-        expect(dateStrings).toEqual([])
-        expect(dateStrings.map(ds => new Date(ds))).toEqual({})
+        let codeExamen = "ILOMB";
+        let datesWithAvailabilities = await getAvailableDates(codeExamen);
+        expect(datesWithAvailabilities).toHaveLength(10)
+        // expect(dateStrings).toHaveLength(10)
     })
     it('should order dates ', async() => {
         const searchResponse: SearchResponse = JSON.parse(fs.readFileSync("./example-response.json").toString())
@@ -50,4 +65,11 @@ describe('', function () {
         const result = findDatesBefore(new Date("2023-04-05"), dates)
         expect(result).toEqual([new Date("2023-04-04"), new Date("2023-02-21")])
     });
+
+    it('should ', () => {
+        expect(nextDay(new Date("2023-03-05T00:00:00Z")).toISOString()).toEqual("2023-03-06T00:00:00.000Z")
+        expect(nextDay(new Date("2023-02-28T00:00:00Z")).toISOString()).toEqual("2023-03-01T00:00:00.000Z")
+    });
+
+    // notify if dates before are not empty
 });
